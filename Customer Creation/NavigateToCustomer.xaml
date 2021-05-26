@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="NavigateToCustomer" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1410.4,1204" sap2010:WorkflowViewState.IdRef="NavigateToCustomer_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="NavigateToCustomer" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1028.8,1204" sap2010:WorkflowViewState.IdRef="NavigateToCustomer_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="26">
       <x:String>System.Activities</x:String>
@@ -55,8 +55,8 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="NavigateToCustomer" sap:VirtualizedContainerService.HintSize="641.6,1139.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -99,7 +99,7 @@
                   </ui:CursorPosition>
                 </ui:Click.CursorPosition>
                 <ui:Click.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f3f9b3c7-b92c-44a4-bd01-48d5e971a420" InformativeScreenshot="e159a049f64149eb0a5622158fb529b9" Selector="&lt;webctrl id='ember368' tag='A' /&gt;">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f3f9b3c7-b92c-44a4-bd01-48d5e971a420" InformativeScreenshot="e159a049f64149eb0a5622158fb529b9" Selector="&lt;html app='chrome.exe' title='Contacts | Zoho Invoice' /&gt;&lt;webctrl tag='A' aaname='    Customers ' /&gt;">
                     <ui:Target.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:Target.TimeoutMS>

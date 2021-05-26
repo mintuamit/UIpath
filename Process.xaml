@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1410.4,910.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1028.8,2230.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -61,25 +61,62 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="375.2,845.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="420,2165.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Navigate to Customer&quot;]" />
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke NavigateToCustomer workflow" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="NavigateToCustomer.xaml">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="378.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Navigate to Customer&quot;]" />
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke NavigateToCustomer workflow" sap:VirtualizedContainerService.HintSize="378.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Customer Creation\NavigateToCustomer.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Create Customer......&quot;]" />
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;&quot;]" />
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="378.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Create Customer info....&quot;]" />
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Create Customer Info workflow" sap:VirtualizedContainerService.HintSize="378.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Customer Creation\Create Customer Info.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="sd:DataRow" x:Key="in_TransactionItem">[in_TransactionItem]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="378.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Customer Other Details&quot;]" />
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Customer Other Details workflow" sap:VirtualizedContainerService.HintSize="378.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Customer Creation\Customer Other Details.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="sd:DataRow" x:Key="in_TransactionItem">[in_TransactionItem]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="378.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Filling Billing Address Detail&quot;]" />
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Customer Billing Address workflow" sap:VirtualizedContainerService.HintSize="378.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Customer Creation\Customer Billing Address.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="sd:DataRow" x:Key="in_TransactionItem">[in_TransactionItem]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="378.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Filling Shiping Address Detail&quot;]" />
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Customer Shipping Address workflow" sap:VirtualizedContainerService.HintSize="378.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Customer Creation\Customer Shipping Address.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="sd:DataRow" x:Key="in_TransactionItem">[in_TransactionItem]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="378.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Filling Contact Person Details&quot;]" />
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Create Custmer Contact Person workflow" sap:VirtualizedContainerService.HintSize="378.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Customer Creation\Create Custmer Contact Person.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="sd:DataRow" x:Key="in_TransactionItem">[in_TransactionItem]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="378.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Customer Creation Confirmation....&quot;]" />
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Customer Creation Confirmation workflow" sap:VirtualizedContainerService.HintSize="378.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Customer Creation\Customer Creation Confirmation.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="sd:DataRow" x:Key="In_TransactionItem">
+          <mva:VisualBasicValue x:TypeArguments="sd:DataRow" ExpressionText="in_TransactionItem" />
+        </InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
   </Sequence>
 </Activity>

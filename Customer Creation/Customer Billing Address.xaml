@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>734.4,1756.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>734.4,1904</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Customer_Billing_Address_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -63,27 +63,48 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Customer_Billing_Address" sap:VirtualizedContainerService.HintSize="475.2,1692" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Customer_Billing_Address" sap:VirtualizedContainerService.HintSize="475.2,1839.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe New'" sap:VirtualizedContainerService.HintSize="433.6,1599.2" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="80a6dde5bead14e915ca8a2563cd7de1" Selector="&lt;html app='chrome.exe' title='New Contact | Contacts | Zoho Invoice' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe New'" sap:VirtualizedContainerService.HintSize="433.6,1746.4" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="80a6dde5bead14e915ca8a2563cd7de1" Selector="&lt;html app='chrome.exe' title='New Contact | Contacts | Zoho Invoice' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,1452" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,1599.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
+            <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5e8b0bba-f502-450a-92e1-87cb35d912b3" InformativeScreenshot="2740df8d1572ed0e0322f122f17dde34" Selector="&lt;webctrl aaname=' Address ' aria-role='tab' tag='SPAN' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
             <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'LABEL'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">

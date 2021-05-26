@@ -11,7 +11,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1410.4,920</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>734.4,920</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetTransactionData_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -74,7 +74,6 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
@@ -89,7 +88,13 @@
     </sap:WorkflowViewStateService.ViewState>
     <If Condition="[in_TransactionNumber=1]" sap:VirtualizedContainerService.HintSize="568.8,267.2" sap2010:WorkflowViewState.IdRef="If_2">
       <If.Then>
-        <ui:ReadRange AddHeaders="True" DataTable="[io_TransactionData]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="A1:A2" SheetName="Customer Creation" WorkbookPath="Data\Input\InputFile.xlsx" />
+        <ui:ReadRange AddHeaders="True" DataTable="[io_TransactionData]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Customer Creation" WorkbookPath="Data\Input\InputFile.xlsx">
+          <ui:ReadRange.Range>
+            <InArgument x:TypeArguments="x:String">
+              <Literal x:TypeArguments="x:String" Value="" />
+            </InArgument>
+          </ui:ReadRange.Range>
+        </ui:ReadRange>
       </If.Then>
     </If>
     <If Condition="[in_TransactionNumber &lt;= io_TransactionData.Rows.Count]" sap:VirtualizedContainerService.HintSize="568.8,219.2" sap2010:WorkflowViewState.IdRef="If_3">
